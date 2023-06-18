@@ -95,6 +95,6 @@ finalDf['date'] = pd.to_datetime(finalDf['date'])
 # -
 
 conn = sqlite3.connect('data.sqlite')
-matched_df.to_sql('data', conn, if_exists='append')
+finalDf.to_sql('data', conn, if_exists='append')
 print(f'UFC Fighters Rankings snapshot for {snapshotDate} successfully scraped and updated')
 conn.close()
